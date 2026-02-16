@@ -57,18 +57,27 @@
 /* ===== PÁGINA AR ============ */
 /* ============================= */
 
+/* Página AR */
+
 .ar-page {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
-/* Cena AR */
-.ar-page a-scene {
-  position: fixed;
+/* Força proporção correta do canvas */
+
+.ar-page a-scene,
+.ar-page canvas {
+  position: fixed !important;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw !important;
+  height: 100vh !important;
 }
+
 
 /* Overlay */
 .ui-overlay {
