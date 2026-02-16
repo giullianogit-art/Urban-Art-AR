@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TotemAR - AR</title>
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/app.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+  <!-- UI Overlay -->
+  <div class="ui-overlay hidden" id="uiPanel">
+    <div class="info-box">
+      <h2>Nome da Obra</h2>
+      <p>Artista</p>
+
+      <div class="buttons">
+        <button onclick="openVideo()">🎥 Vídeo</button>
+        <button onclick="openInfo()">ℹ️ Sobre</button>
+        <button onclick="enterGallery()">🌐 Galeria</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cena AR -->
+  <a-scene
+    embedded
+    arjs="sourceType: webcam; debugUIEnabled: false;"
+  >
+
+    <a-assets>
+      <a-asset-item id="model" src="assets/models/obra.glb"></a-asset-item>
+    </a-assets>
+
+    <a-marker
+      type="pattern"
+      url="assets/markers/pattern-marker.patt"
+      id="marker"
+    >
+
+      <!-- Base do Totem -->
+      <a-box 
+        position="0 0.5 0" 
+        depth="0.6" 
+        height="1" 
+        width="0.6"
+        color="#0F0F12">
+      </a-box>
+
+      <!-- Luz inferior neon -->
+      <a-box
+        position="0 0.05 0"
+        depth="0.65"
+        height="0.05"
+        width="0.65"
+        material="color: #00D4FF; emissive: #00D4FF; emissiveIntensity: 0.5">
+      </a-box>
+
+      <!-- Obra 3D -->
+      <a-entity
+        gltf-model="#model"
+        position="0 1.1 0"
+        scale="0.5 0.5 0.5"
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 12000"
+      >
+      </a-entity>
+
+    </a-marker>
+
+    <a-entity camera></a-entity>
+
+  </a-scene>
+
+</body>
+</html>
