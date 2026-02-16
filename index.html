@@ -1,40 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>Teste AR.js</title>
-
-  <!-- A-Frame -->
-  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-
-  <!-- AR.js -->
-  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
-
-  <style>
-    body { margin: 0; overflow: hidden; }
-  </style>
+  <meta charset="UTF-8">
+  <title>TotemAR - Museu Urbano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="home">
 
-<body>
+  <div class="center-container">
+    <h1 class="logo">TOTEM<span>AR</span></h1>
+    <p class="subtitle">Museu Urbano em Realidade Aumentada</p>
 
-<a-scene embedded arjs>
-  
-  <!-- Marcador padrão Hiro -->
-  <a-marker preset="hiro">
-    
-    <!-- Cubo teste -->
-    <a-box position="0 0.5 0"
-           material="color: red;">
-    </a-box>
-
-  </a-marker>
-
-  <!-- Câmera -->
-  <a-entity camera></a-entity>
-
-</a-scene>
+    <a href="ar.html" class="enter-btn">
+      Entrar na Experiência
+    </a>
+  </div>
 
 </body>
-</html>
-
 </html>
