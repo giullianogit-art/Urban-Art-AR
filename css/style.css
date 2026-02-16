@@ -1,88 +1,75 @@
-body {
+/* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
   font-family: 'Segoe UI', sans-serif;
   background: #0F0F12;
   color: #F5F7FA;
 }
 
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.center-container {
-  text-align: center;
-}
-
-.logo {
-  font-size: 3rem;
-  letter-spacing: 2px;
-}
-
-.logo span {
-  color: #00D4FF;
-}
-
-.subtitle {
-  color: #aaa;
-  margin-bottom: 30px;
-}
-
-.enter-btn {
-  padding: 15px 30px;
-  background: transparent;
-  border: 2px solid #00D4FF;
-  color: #00D4FF;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.enter-btn:hover {
-  background: #00D4FF;
-  color: #0F0F12;
-}
-
-/* UI Overlay */
-
+/* Overlay geral */
 .ui-overlay {
   position: fixed;
-  bottom: 20px;
+  bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 16px;
   pointer-events: none;
 }
 
+/* Caixa principal */
 .info-box {
-  background: rgba(20,20,25,0.9);
+  width: 100%;
+  max-width: 500px;
+  background: rgba(15, 15, 18, 0.95);
   border: 1px solid #00D4FF;
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
+  border-radius: 16px;
+  padding: 18px;
+  backdrop-filter: blur(10px);
   pointer-events: all;
+  box-shadow: 0 0 25px rgba(0,212,255,0.2);
 }
 
+/* Texto */
+.info-box h2 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.info-box p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+/* Botões */
 .buttons {
-  margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 }
 
 button {
-  flex: 1;
-  margin: 5px;
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
   background: transparent;
   border: 1px solid #00D4FF;
   color: #00D4FF;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.97);
 }
 
 button:hover {
@@ -90,6 +77,7 @@ button:hover {
   color: #0F0F12;
 }
 
+/* Esconder */
 .hidden {
   display: none;
 }
