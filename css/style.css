@@ -1,55 +1,113 @@
-/* Reset */
+/* RESET GLOBAL */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Base */
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* ============================= */
+/* ===== PÁGINA INICIAL ======== */
+/* ============================= */
+
+.home {
   background: #0F0F12;
   color: #F5F7FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Overlay geral */
+.center-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #00D4FF;
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.enter-btn {
+  padding: 14px 28px;
+  border: 2px solid #00D4FF;
+  color: #00D4FF;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.enter-btn:hover {
+  background: #00D4FF;
+  color: #0F0F12;
+}
+
+/* ============================= */
+/* ===== PÁGINA AR ============ */
+/* ============================= */
+
+.ar-page {
+  overflow: hidden;
+}
+
+/* Cena AR */
+.ar-page a-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Overlay */
 .ui-overlay {
   position: fixed;
-  bottom: 0;
+  bottom: calc(20px + env(safe-area-inset-bottom));
   left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 16px;
+  z-index: 10;
   pointer-events: none;
 }
 
-/* Caixa principal */
 .info-box {
   width: 100%;
-  max-width: 500px;
+  max-width: 420px;
   background: rgba(15, 15, 18, 0.95);
   border: 1px solid #00D4FF;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 18px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0,212,255,0.25);
   pointer-events: all;
-  box-shadow: 0 0 25px rgba(0,212,255,0.2);
 }
 
-/* Texto */
 .info-box h2 {
-  font-size: 1.2rem;
-  margin-bottom: 4px;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: white;
 }
 
 .info-box p {
   font-size: 0.9rem;
   opacity: 0.7;
   margin-bottom: 15px;
+  color: #ccc;
 }
 
-/* Botões */
 .buttons {
   display: flex;
   flex-direction: column;
@@ -65,11 +123,11 @@ button {
   color: #00D4FF;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
 }
 
 button:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 
 button:hover {
@@ -77,7 +135,6 @@ button:hover {
   color: #0F0F12;
 }
 
-/* Esconder */
 .hidden {
   display: none;
 }
