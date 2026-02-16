@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0F0F12;
+  color: #F5F7FA;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-container {
+  text-align: center;
+}
+
+.logo {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #00D4FF;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.enter-btn {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #00D4FF;
+  color: #00D4FF;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.enter-btn:hover {
+  background: #00D4FF;
+  color: #0F0F12;
+}
+
+/* UI Overlay */
+
+.ui-overlay {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.info-box {
+  background: rgba(20,20,25,0.9);
+  border: 1px solid #00D4FF;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  pointer-events: all;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #00D4FF;
+  color: #00D4FF;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00D4FF;
+  color: #0F0F12;
+}
+
+.hidden {
+  display: none;
+}
