@@ -57,7 +57,7 @@
 /* ===== PÁGINA AR ============ */
 /* ============================= */
 
-/* Página AR */
+/* ===== AR PAGE ===== */
 
 .ar-page {
   margin: 0;
@@ -65,12 +65,16 @@
   overflow: hidden;
 }
 
-/* Não force tamanho do canvas */
-.ar-page a-scene {
-  position: fixed;
+/* NÃO forçar tamanho */
+.ar-page canvas,
+.ar-page video,
+.ar-page .a-canvas,
+.ar-page .arjs-video {
+  position: absolute !important;
   top: 0;
   left: 0;
 }
+
 
 
 
