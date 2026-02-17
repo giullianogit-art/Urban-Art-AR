@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+  <meta charset="utf-8">
+
   <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <title>TotemAR - AR</title>
 
@@ -13,8 +15,7 @@
   <script defer src="js/app.js"></script>
 </head>
 
-<body style="margin: 0; overflow: hidden;">
-  <body class="ar-page">
+<body class="ar-page">
 
   <!-- UI Overlay -->
   <div class="ui-overlay hidden" id="uiPanel">
@@ -32,10 +33,9 @@
 
   <!-- Cena AR -->
   <a-scene
-  renderer="antialias: true; alpha: true;"
-  arjs="sourceType: webcam; debugUIEnabled: false;"
->
-
+    renderer="antialias: true; alpha: true;"
+    arjs="sourceType: webcam; debugUIEnabled: false;"
+  >
 
     <a-assets>
       <a-asset-item id="model" src="assets/models/Boneca27.glb"></a-asset-item>
@@ -47,7 +47,7 @@
       id="marker"
     >
 
-      <!-- Base do Totem -->
+      <!-- Base -->
       <a-box 
         position="0 0.5 0" 
         depth="0.6" 
@@ -56,7 +56,7 @@
         color="#0F0F12">
       </a-box>
 
-      <!-- Luz inferior neon -->
+      <!-- Luz inferior -->
       <a-box
         position="0 0.05 0"
         depth="0.65"
@@ -65,15 +65,13 @@
         material="color: #00D4FF; emissive: #00D4FF; emissiveIntensity: 0.5">
       </a-box>
 
-      <!-- Obra 3D -->
+      <!-- Modelo -->
       <a-entity
         gltf-model="#model"
         position="0 1.1 0"
         scale="0.5 0.5 0.5"
-        rotation="0 0 0"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 12000"
-      >
-      </a-entity>
+      ></a-entity>
 
     </a-marker>
 
